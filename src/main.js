@@ -5,12 +5,20 @@ import './plugins/element.js'
 
 /* 引入全局样式表 */
 import './assets/css/global.css'
-/* 引入字体图标 */ 
+/* 引入字体图标 */
 import './assets/fonts/iconfont.css'
 
 import axios from 'axios'
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// axios请求拦截
+axios.interceptors.request.use(config => {
+  // 在请求头中添加token字段，用于验证
+  // console.log(config);
+  config.headers.Authorization = window.sessionStorage.getItem('token');
+  // console.log(config);
+  return config;
+})
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
