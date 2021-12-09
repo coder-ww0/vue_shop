@@ -87,6 +87,9 @@ export default {
       // 1.1项目中出了登录值卡的其他API接口。必须在登录之后才能访问
       // 1.2token只应在网站打开期间生效，必须将token保存在sessionStorage中
       window.sessionStorage.setItem("token", res.data.token);
+      // 打印token
+      console.log('------');
+      console.log(res.data.token);
       // 2.登录成功后跳转到首页
       this.$router.push("/home");
       });
