@@ -9,7 +9,7 @@ import { Menu, MenuItem, Submenu, MenuItemGroup } from 'element-ui'
 import { Breadcrumb,BreadcrumbItem } from 'element-ui'
 import { Card, Row, Col, Table, TableColumn, Switch, Tooltip, Pagination, Dialog } from 'element-ui'
 import { MessageBox } from 'element-ui';
-import { Tag, Tree, Select, Option, Cascader } from 'element-ui';
+import { Tag, Tree, Select, Option, Cascader, Alert, Tabs, TabPane } from 'element-ui';
 
 Vue.use(Button)
 Vue.use(Form)
@@ -39,6 +39,9 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 
 Vue.component(Message)
 Vue.prototype.$message = Message
